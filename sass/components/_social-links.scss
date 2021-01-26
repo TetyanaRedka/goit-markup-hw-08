@@ -1,0 +1,56 @@
+/* -- иконки социальных сетей --*/
+.icon-block {
+    display: inline-flex;
+}
+  
+.icon-list:not(:first-child) {
+    margin-left: 10px;
+}
+  
+.icon-link {
+    /*флекс*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*параметры*/
+    height: 44px;
+    width: 44px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
+    
+    &:hover,
+    &:focus {
+      background-color: var(--icon-active-back-color);
+    }    
+  
+    .footer & {
+        background-color: rgba(255, 255, 255, 0.1);
+     
+        &:hover,
+        &:focus {
+        background-color: var(--icon-active-back-color);
+      }
+    }
+}
+  
+.icon-img {
+    height: 20px;
+    width: 20px;
+    fill: var(--icon-color);
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
+        
+    .icon-link:hover &,
+    .icon-link:focus & {
+      fill: #ffffff;
+    }
+
+    .footer &{
+        fill: #ffffff;
+    }
+} 
+
+

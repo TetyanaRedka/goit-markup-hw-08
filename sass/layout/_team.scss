@@ -1,0 +1,78 @@
+/* команда */
+.team {
+      background: #f5f4fa;
+
+    @media screen and (max-width: 1199px) {
+      padding: 60px 0 30px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      padding: 94px 0 64px;
+    }
+  }
+  
+  .team-box {
+    margin-top: 30px;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-top: 50px;
+    }
+  } 
+ 
+
+  .team-list {
+    border-radius: 0px 0px 4px 4px;
+    background-color: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    
+    @media screen and (min-width: 768px) {
+      margin: 0 15px 30px 15px;
+      width: calc( 100% / 2 - 15px * 2);
+    }
+        
+    @media screen and (min-width: 1200px) {
+      width: calc( 100% / 4 - 15px * 2);
+      }
+  
+  }
+
+ .team-list img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .team-info {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0;
+    align-items: center;
+    
+  }
+ 
+  .team-name {
+    margin: 0;
+    padding: 0;
+    /*text*/
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+ 
+  }
+   
+  .profession {
+    margin: 10px 0 16px 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+  }

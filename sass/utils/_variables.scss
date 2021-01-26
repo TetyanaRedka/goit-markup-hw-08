@@ -1,0 +1,25 @@
+/* кнопка подпишись на футере не работает наведение */
+
+/* 
+++ стандартный шрифт страницы Roboto 
+++ шрифт лого Raleway
+++ стандартный цвет ссылок и h2, h3  #212121; 
+++ подсвеченный цвет ссылок, #2196F3;
+++ цвет текста Герой #FFFFFF;
+++ цвет стандартного текста и номера телефона #757575;
+ */
+
+/* Базовые настройки*/
+:root {
+    --links-text-color: #212121;
+    --links-text-color-active: #2196f3;
+    --h2-h4-text-color: #212121;
+    --standart-text: #757575;
+    --text-hero: #ffffff;
+    --icon-color: #afb1b8;
+    --icon-active-color: #ffffff;
+    --icon-active-back-color: #2196f3;
+    --transition-duration: 250ms;
+    --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  

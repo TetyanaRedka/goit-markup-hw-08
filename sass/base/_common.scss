@@ -1,0 +1,51 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  /*text*/
+  font-family: 'Roboto', sans-serif;
+  color: var(--standart-text);
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  margin: 0;
+}
+
+input,
+textarea {
+  font-family: 'Roboto', sans-serif;
+}
+
+button {
+  padding: 0;
+  border: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+label {
+  margin: 0;
+}

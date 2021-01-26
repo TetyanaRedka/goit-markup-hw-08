@@ -1,0 +1,23 @@
+@import "./utils/variables";
+/*@import "./utils/mixins";*/
+
+@import "./base/common";
+@import "./base/containers";
+
+@import "./components/components";
+@import "./components/modal";
+@import "./components/social-links";
+
+/*==============BLOCKS=======*/
+@import "./layout/header";
+
+/* ==============Основной блок ============*/
+@import "./layout/hero";
+@import "./layout/features";
+@import "./layout/services";
+@import "./layout/team";
+@import "./layout/clients";
+@import "./layout/projects";
+
+
+@import "./layout/footer";
