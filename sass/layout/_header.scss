@@ -139,7 +139,7 @@
 /* -------Всплывающее окно Хедера--------------*/
 .header-modal {
   width: 100%;
-  max-width: 480px;
+  max-width: 767px;
   height: 100vh;
   background-color: #ffffff;
   position: fixed;
@@ -184,7 +184,8 @@
 }
 
 .header-modal-phone-link {
-  display: inline-block;
+  display: block;
+  width: 100%;
   font-weight: 500;
   font-size: 34px;
   line-height: 1.175;
@@ -196,7 +197,7 @@
 }
 
 .header-modal-address-link {
-  display: inline-block;
+  display: block;
   font-weight: 500;
   font-size: 24px;
   margin-top: 32px;
