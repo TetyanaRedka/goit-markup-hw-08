@@ -37,7 +37,7 @@
             <span class="header-address-text"> +38 096 111 11 11</span></a
           >
         </div>
-        <button data-meny-open type="button">
+        <button data-menu-button type="button" class="burger">
           <svg class="icon-header">
             <use href="./img/icon/sprite.svg#icon-header"></use>
           </svg>
@@ -45,7 +45,7 @@
       </div>
 
       <!-- всплывающее окно Хедера    -->
-      <div class="header-modal is-hidden" data-meny>
+      <div class="header-modal" data-menu>
         <ul class="header-modal-nav">
           <li class="header-modal-list"><a href="./index.html" class="header-modal-links">Студия</a></li>
           <li class="header-modal-list"><a href="./portfolio.html" class="header-modal-links">Портфолио</a></li>
@@ -61,9 +61,9 @@
           <li class="header-modal-social-list"><a href="Facebook" class="header-modal-social-link">Facebook</a></li>
           <li class="header-modal-social-list"><a href="LinkedIn" class="header-modal-social-link">LinkedIn</a></li>
         </ul>
-        <button data-meny-close type="reset" class="icon-x">
-          <svg>
-            <use href="./img/icon/sprite.svg#icon-close"></use>
+        <button data-menu-close type="reset" class="icon-x-modal">
+          <svg class="icon-close-modal">
+            <use href="./img/icon/sprite.svg#icon-close-modal"></use>
           </svg>
         </button>
       </div>
@@ -512,5 +512,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

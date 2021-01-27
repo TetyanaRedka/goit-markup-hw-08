@@ -303,16 +303,16 @@ footer .logo-text {
   top: 50%;
   transform: translate(-50%, -50%);
   width: calc(100% - 30px);
-  /*overflow-y: scroll;*/
   padding: 40px;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 1199px) {
   .modal {
     width: 450px;
+    overflow-y: scroll;
   }
 }
 
@@ -616,10 +616,16 @@ textarea {
   color: var(--links-text-color-active);
 }
 
+.burger {
+  background-color: transparent;
+}
+
 .icon-header {
   width: 40px;
   height: 40px;
   margin-left: auto;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 
 button:hover .icon-header,
@@ -646,16 +652,21 @@ button:focus .icon-header {
   display: flex;
   flex-direction: column;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
-}
-
-.header-modal.is-open {
-  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 @media screen and (min-width: 768px) {
   .header-modal {
     display: none;
   }
+}
+
+.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .header-modal-list:not(:first-child) {
@@ -720,10 +731,35 @@ button:focus .icon-header {
   color: var(--links-text-color-active);
 }
 
+.icon-x-modal {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 15px;
+  top: 10px;
+  height: 40px;
+  width: 40px;
+  background-color: #ffffff;
+  border: 0;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+}
+
+.icon-close-modal {
+  height: 40px;
+  width: 40px;
+}
+
+.icon-x-modal:hover .icon-close-modal,
+.icon-x-modal:focus .icon-close-modal {
+  fill: var(--icon-active-back-color);
+}
+
 /* ==============Основной блок ============*/
 /* Блок Hero */
 .hero {
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../img/hero/hero-mobile.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero/hero-mobile.jpg);
   background-color: #2f303a;
   background-position: center;
   background-size: cover;
@@ -732,25 +768,25 @@ button:focus .icon-header {
 
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 280px) and (max-width: 767px), screen and (min-resolution: 192dpi) and (min-width: 280px) and (max-width: 767px), screen and (min-resolution: 2dppx) and (min-width: 280px) and (max-width: 767px) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../img/hero/hero-mobile@2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero/hero-mobile@2x.jpg);
   }
 }
 
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../img/hero/hero-tablet@2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero/hero-tablet@2x.jpg);
   }
 }
 
 @media screen and (min-width: 768px) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../img/hero/hero-tablet.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero/hero-tablet.jpg);
   }
 }
 
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../img/hero/hero-desktop@2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero/hero-desktop@2x.jpg);
   }
 }
 
@@ -763,19 +799,13 @@ button:focus .icon-header {
 @media screen and (min-width: 1200px) {
   .hero {
     height: 600px;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../img/hero/hero-desktop.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero/hero-desktop.jpg);
   }
 }
 
 /* Блок Особенности */
 .features {
   padding: 60px 0 30px;
-}
-
-@media screen and (min-width: 768px) {
-  .features {
-    margin: -15px -15px 0 -15px;
-  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -788,7 +818,7 @@ button:focus .icon-header {
   .features-box {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -15px;
+    margin: -15px -15px 0 -15px;
   }
 }
 

@@ -28,7 +28,7 @@
     margin-left: auto;
     margin-right: auto;
 
-    @media screen and (min-width: 1200px){
+    @media screen and (min-width: 1200px) {
       margin-left: 12px;
     }
   }
@@ -54,16 +54,15 @@
   letter-spacing: 0.06em;
   color: var(--text-hero);
 
-  @media screen and (min-width: 1200px){
+  @media screen and (min-width: 1200px) {
     font-size: 44px;
     line-height: 1.36;
     max-width: 700px;
   }
 
-  .projects &{
+  .projects & {
     display: none;
   }
-
 }
 
 .titul-two {
@@ -78,7 +77,6 @@
   .features & {
     display: none;
   }
-
 }
 
 .titul-three {
@@ -95,10 +93,9 @@
     text-transform: uppercase;
   }
 }
-  
+
 /* -------------  ЛОГО -----------------*/
 .logo {
-
   /*text*/
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -106,17 +103,17 @@
   line-height: 1.19;
   color: #2196f3;
 }
-  
+
 .logo-text {
   color: #000000;
 
   footer & {
     color: #ffffff;
-  }  
+  }
 }
-  
+
 /* ----- Кнопка закрытия модального окна -------------*/
-  
+
 .icon-x {
   position: absolute;
   display: flex;
